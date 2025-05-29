@@ -14,7 +14,7 @@ class EmbeddingDataLoader:
         embeddings = []
         labels = []
 
-        if self.data_path.suffix == '.json'
+        if self.data_path.suffix == '.json':
             with open(self.data_path, 'r', encoding = 'utf-8') as f:
                 data = json.load(f)
                 #if just one data
@@ -26,7 +26,7 @@ class EmbeddingDataLoader:
                     for item in data:
                         embeddings.append(item['embedding'])
                         labels.append(item['label'])
-        elif print("the wrong path\n")
+        else: print("the wrong path\n")
 
         embeddings = np.array(embeddings, dtype = np.float32)
         labels = np.array(labels, dtype = np.int64)
@@ -35,4 +35,4 @@ class EmbeddingDataLoader:
         print(f"Loading completed: {len(embeddings)} datas, embedding dimension: {self.embedding_dim}")
 
         return embeddings, labels
-        
+
