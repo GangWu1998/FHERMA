@@ -1,5 +1,5 @@
 import torch 
-from torch.utils.data import dataset, DataLoader 
+from torch.utils.data import Dataset, DataLoader 
 import numpy as np
 from typing import Tuple
 from sklearn.model_selection import train_test_split
